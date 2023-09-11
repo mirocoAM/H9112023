@@ -64,7 +64,13 @@
       "left": 189.38,
       "attrs": { "color": "red", "flip": "1" }
     },
-    { "type": "wokwi-rgb-led", "id": "rgb1", "top": -172.93, "left": 21.5, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -172.93,
+      "left": 21.5,
+      "attrs": { "common": "cathode" }
+    },
     {
       "type": "wokwi-resistor",
       "id": "r5",
@@ -118,12 +124,10 @@
     [ "led1:A", "esp:D15", "green", [ "v0" ] ],
     [ "led2:A", "esp:D2", "green", [ "v0" ] ],
     [ "led4:A", "esp:D4", "green", [ "v0" ] ],
-    [ "led3:A", "esp:RX2", "green", [ "v0" ] ],
     [ "esp:GND.1", "rgb1:COM", "black", [ "h0" ] ],
     [ "rgb1:G", "r5:1", "green", [ "v0" ] ],
     [ "rgb1:R", "r7:1", "green", [ "v0" ] ],
     [ "rgb1:B", "r6:1", "green", [ "v0" ] ],
-    [ "esp:RX0", "r7:2", "green", [ "h0" ] ],
     [ "esp:D21", "r5:2", "green", [ "h0" ] ],
     [ "esp:D19", "r6:2", "green", [ "h0" ] ],
     [ "ntc1:GND", "esp:GND.2", "black", [ "h39.66", "v129.26" ] ],
@@ -132,7 +136,9 @@
     [ "joystick1:GND", "esp:GND.2", "black", [ "v0" ] ],
     [ "joystick1:HORZ", "esp:D32", "green", [ "v55.86", "h239.04", "v-90.92" ] ],
     [ "joystick1:VERT", "esp:D33", "green", [ "v67.32", "h237.17", "v-87.64" ] ],
-    [ "joystick1:VCC", "esp:3V3", "red", [ "v129.57", "h435.16", "v-79.45" ] ]
+    [ "joystick1:VCC", "esp:3V3", "red", [ "v129.57", "h435.16", "v-79.45" ] ],
+    [ "led3:A", "esp:D5", "green", [ "v0" ] ],
+    [ "esp:D22", "r7:2", "green", [ "h0" ] ]
   ],
   "dependencies": {}
 }
